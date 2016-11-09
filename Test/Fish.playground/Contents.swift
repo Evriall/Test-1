@@ -33,7 +33,7 @@ class FishLife {
             let randomCarnivorous = Int(arc4random_uniform(UInt32(2)))
             let randomHerbivorous = Int(arc4random_uniform(UInt32(self.aquarium.count)))
             self.carnivorous[randomCarnivorous].weight += self.aquarium[randomHerbivorous].weight
-            self.aquarium.remove(at: self.aquarium.count-1)
+            self.aquarium.remove(at: randomHerbivorous)
         }
     }
     func displayResult(){
